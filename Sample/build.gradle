@@ -1,17 +1,20 @@
-apply plugin: 'android'
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
 
 dependencies {
     compile project(':Library')
+    compile "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
 }
 
 
 android {
-    compileSdkVersion 17
-  	buildToolsVersion '17'
+    compileSdkVersion 27
+  	buildToolsVersion '27.0.3'
   
     defaultConfig {
-        minSdkVersion 8
-        targetSdkVersion 17
+        minSdkVersion 21
+        targetSdkVersion 27
 
     }
     
@@ -23,4 +26,7 @@ android {
         }
     }
 
+}
+repositories {
+    mavenCentral()
 }
